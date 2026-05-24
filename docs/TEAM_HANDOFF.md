@@ -20,13 +20,9 @@ Current link: `https://ayahuascaincolombia.com`
 
 Replace with the final booking URL before launch.
 
-## Page Sections
+## Live Page Files
 
-- Hero
-- Why integration matters
-- Coaching approach
-- Coach profiles
-- What to expect
-- FAQ
-- Final consultation CTA
-- Footer
+The deployable page is now at the repository root:
+
+- `index.html`
+- `assets/images/`

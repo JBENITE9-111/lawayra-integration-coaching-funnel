@@ -1,24 +1,26 @@
 # Deployment Guide
 
-## Option 1: Upload Only The Funnel
+## Live Files
 
-Upload the contents of `landing_page/` to the server or funnel host. The landing page entry file is:
+The live funnel is now at the repository root.
 
-`landing_page/index.html`
+Required files for deployment:
 
-Keep the `assets/images/` folder next to `index.html` so image paths continue to work.
+- `index.html`
+- `assets/images/`
 
-## Option 2: Upload The Whole Repository
+## Option 1: Upload To A Funnel Server
 
-If the host expects a project root, upload the whole repository. The root `index.html` redirects to `landing_page/`.
+Upload the repository root or only the live files listed above.
 
-## GitHub Pages
+## Option 2: GitHub Pages
 
-1. Create a new GitHub repository.
-2. Upload or push this folder.
-3. In GitHub, go to Settings -> Pages.
-4. Choose the main branch and root folder.
-5. GitHub Pages will load the root `index.html`, which redirects to `landing_page/`.
+1. Create or open the GitHub repository.
+2. Push this folder to the `main` branch.
+3. In GitHub, go to `Settings` -> `Pages`.
+4. Choose `Deploy from a branch`.
+5. Select `main` and `/root`.
+6. Save and wait for deployment.
 
 ## Before Launch
 

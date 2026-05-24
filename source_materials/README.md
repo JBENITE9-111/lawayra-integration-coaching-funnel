@@ -5,6 +5,6 @@ This folder keeps reference material that should remain available to the team bu
 ## Contents
 
 - `archived_ap_project/` - copied source/reference files from the AP project.
-- `extra_assets/images/` - image files that are preserved but not currently used by the live landing page.
+- `extra_assets/` - preserved image files that are not currently used by the live page.
 
-The deployable page is in `../landing_page/`.
+The deployable page is now at the repository root.

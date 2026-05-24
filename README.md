@@ -6,7 +6,7 @@ A clean, repository-ready static landing page package for LaWayra's post-retreat
 
 Open this file directly in a browser:
 
-`landing_page/index.html`
+`index.html`
 
 No local server or build step is required.
 
@@ -14,23 +14,22 @@ No local server or build step is required.
 
 ```text
 .
-├── index.html                  # Redirects to landing_page/ for root hosting
-├── landing_page/               # Deployable funnel page
-│   ├── index.html              # Main landing page
-│   ├── README.md               # Page-specific notes
-│   └── assets/images/          # Only images required by the live page
+├── index.html                  # Main landing page
+├── assets/                     # Images used by the live page
+│   └── images/
 ├── docs/                       # Team handoff, deployment, and source notes
 ├── source_materials/           # Archived AP source files and extra assets
 ├── AGENTS.md                   # Codex instructions for future work
 ├── .gitignore
-└── .nojekyll                   # Keeps GitHub Pages from processing the site with Jekyll
+└── .nojekyll
 ```
 
 ## What To Upload To The Server
 
-Upload the contents of `landing_page/` when the team wants only the funnel page.
+Upload the whole repository root, or at minimum:
 
-Upload the whole repository if the hosting service expects a project root. The root `index.html` redirects visitors to `landing_page/`.
+- `index.html`
+- `assets/`
 
 ## Current CTA
 

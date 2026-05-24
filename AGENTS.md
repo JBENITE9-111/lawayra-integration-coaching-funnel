@@ -12,15 +12,15 @@ Use this AP project only as source/reference material:
 
 ## Project Goal
 
-Maintain a polished, static, repository-ready landing page for LaWayra post-retreat integration coaching. The deployable page lives in `landing_page/` and should open directly from `landing_page/index.html` without a server or build step.
+Maintain a polished, static, repository-ready landing page for LaWayra post-retreat integration coaching. The deployable page lives at the repository root and should open directly from `index.html` without a server or build step.
 
 ## Repository Rules
 
-- Keep `landing_page/` deployable and lightweight.
+- Keep the repo root deployable and lightweight.
 - Put team handoff documentation in `docs/`.
 - Put source/reference material and extra unused images in `source_materials/`.
 - Do not expose internal draft notes or placeholder language in the live page.
-- Keep local image paths relative to `landing_page/`.
+- Keep live image paths relative to the repository root.
 
 ## Brand Rules
 

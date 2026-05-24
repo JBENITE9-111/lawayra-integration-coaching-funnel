@@ -1,14 +1,14 @@
 # GitHub Repository Setup
 
-This folder is ready to become the GitHub repository for the LaWayra integration coaching funnel.
+This folder is ready to be the GitHub repository for the LaWayra integration coaching funnel.
 
 ## Current Local Repo
 
 The local repository is initialized on branch `main` with an initial commit.
 
-## Create The GitHub Repo
+## Create Or Push The GitHub Repo
 
-Because the current `gh` token on this machine is invalid, re-authenticate first:
+If GitHub CLI needs re-authentication:
 
 ```bash
 gh auth login -h github.com
@@ -18,19 +18,27 @@ Then create and push the repository:
 
 ```bash
 cd /Users/macmac/Documents/Codex/LAWAYRA
-gh repo create lawayra-integration-coaching-funnel --private --source=. --remote=origin --push
+gh repo create lawayra-integration-coaching-funnel --public --source=. --remote=origin --push
 ```
 
-Use `--public` instead of `--private` only if the team wants this repository publicly visible.
+If the repository already exists, just push updates:
+
+```bash
+cd /Users/macmac/Documents/Codex/LAWAYRA
+git push origin main
+```
+
+## GitHub Pages
+
+In the repository settings:
+
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/root`
 
 ## Team Upload Notes
 
-- Upload `landing_page/` to the funnel server if the team only needs the live page files.
-- Upload the whole repository if the server expects a project root.
-- The root `index.html` redirects to `landing_page/`.
+The live funnel files are at the repository root:
 
-## Before Launch
-
-- Replace the consultation CTA URL with the final booking/funnel URL.
-- Confirm legal/disclaimer language.
-- Confirm image usage permissions.
+- `index.html`
+- `assets/`

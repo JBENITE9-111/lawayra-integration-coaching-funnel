@@ -3,14 +3,1020 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=landing_page/">
-  <title>LaWayra Integration Coaching</title>
+  <title>Post-Retreat Integration Coaching | LaWayra</title>
+  <meta name="description" content="Grounded integration coaching for LaWayra guests after an ayahuasca retreat in Colombia. Choose a coach and receive compassionate support for turning insight into everyday change.">
+  <meta property="og:title" content="Post-Retreat Integration Coaching | LaWayra">
+  <meta property="og:description" content="One-to-one integration support for the weeks and months after retreat. Choose the coach whose approach feels right for your next step.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/paradiese_2.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, sans-serif; background: #FFF7E7; color: #2B2728; }
-    a { color: #3F4021; font-weight: 700; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --olive: #3F4021;
+      --olive-soft: #555735;
+      --cream: #FFF7E7;
+      --cream-soft: #FBF1DE;
+      --beige: #D6D0B8;
+      --sage: #AEAC92;
+      --amber: #E4A017;
+      --amber-dark: #B98310;
+      --burnt-orange: #B34100;
+      --brown: #623E2A;
+      --charcoal: #2B2728;
+      --white: #FFFFFF;
+      --ink-muted: rgba(43, 39, 40, 0.72);
+      --line: rgba(63, 64, 33, 0.18);
+      --shadow: 0 24px 60px rgba(43, 39, 40, 0.14);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --container: 1180px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.56;
+    }
+
+    body::selection {
+      background: var(--amber);
+      color: var(--charcoal);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--charcoal);
+      color: var(--cream);
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 247, 231, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(63, 64, 33, 0.12);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links,
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--olive);
+      opacity: 0.9;
+    }
+
+    .nav-logo {
+      justify-self: center;
+    }
+
+    .nav-logo img {
+      width: min(250px, 40vw);
+      height: auto;
+    }
+
+    .nav-actions {
+      justify-self: end;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 22px;
+      border: 0;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-align: center;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--amber);
+      color: var(--white);
+      box-shadow: 0 14px 26px rgba(228, 160, 23, 0.28);
+    }
+
+    .button-primary:hover {
+      background: var(--amber-dark);
+    }
+
+    .button-dark {
+      background: var(--olive);
+      color: var(--cream);
+    }
+
+    .button-dark:hover {
+      background: var(--olive-soft);
+    }
+
+    .button-light {
+      background: var(--cream);
+      color: var(--olive);
+      box-shadow: inset 0 0 0 1px rgba(63, 64, 33, 0.2);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(43, 39, 40, 0.08) 0%, rgba(43, 39, 40, 0.56) 64%, rgba(63, 64, 33, 0.88) 100%),
+        url("assets/images/paradiese_2.jpg") center/cover no-repeat;
+      color: var(--cream);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle at 18% 18%, rgba(255, 247, 231, 0.22), transparent 28%),
+        linear-gradient(90deg, rgba(63, 64, 33, 0.42), rgba(43, 39, 40, 0.06));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 92px 0 58px;
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--amber);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 18px;
+      max-width: 860px;
+      color: var(--cream);
+      font-size: 5.65rem;
+      text-wrap: balance;
+      line-height: 0.94;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-shadow: 0 3px 18px rgba(43, 39, 40, 0.34);
+    }
+
+    .hero-lede {
+      max-width: 650px;
+      margin-bottom: 24px;
+      font-size: 1.24rem;
+      line-height: 1.6;
+      color: rgba(255, 247, 231, 0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: -1px;
+      background: rgba(63, 64, 33, 0.16);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .proof-item {
+      padding: 20px 24px;
+      background: var(--cream);
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--olive);
+      font-size: 1.02rem;
+      line-height: 1.3;
+    }
+
+    .proof-item span {
+      display: block;
+      margin-top: 7px;
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    section {
+      scroll-margin-top: 112px;
+    }
+
+    .section {
+      padding: 52px 0;
+    }
+
+    .section-alt {
+      background: var(--cream-soft);
+    }
+
+    .section-dark {
+      background: var(--olive);
+      color: var(--cream);
+    }
+
+    .section-kicker {
+      margin-bottom: 8px;
+      color: var(--burnt-orange);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-dark .section-kicker {
+      color: var(--amber);
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 16px;
+      color: var(--olive);
+      font-size: 3.2rem;
+      text-wrap: balance;
+      line-height: 1.06;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .section-dark .section-heading {
+      color: var(--cream);
+    }
+
+    .section-intro {
+      max-width: 720px;
+      margin-bottom: 22px;
+      color: var(--ink-muted);
+      font-size: 1.06rem;
+    }
+
+    .section-dark .section-intro {
+      color: rgba(255, 247, 231, 0.78);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(320px, 1fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .image-panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      min-height: 400px;
+      box-shadow: var(--shadow);
+      background: var(--beige);
+    }
+
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+    }
+
+    .image-panel-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255, 247, 231, 0.88);
+      color: var(--olive);
+      box-shadow: 0 20px 46px rgba(43, 39, 40, 0.16);
+      backdrop-filter: blur(16px);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .pain-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pain-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--ink-muted);
+    }
+
+    .pain-list li::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: var(--amber);
+      box-shadow: 0 0 0 7px rgba(228, 160, 23, 0.16);
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .method-card {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid rgba(255, 247, 231, 0.16);
+      border-radius: var(--radius-md);
+      background: rgba(255, 247, 231, 0.07);
+    }
+
+    .method-number {
+      display: inline-grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--amber);
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .method-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+
+    .method-card p {
+      margin-bottom: 0;
+      color: rgba(255, 247, 231, 0.76);
+      font-size: 0.94rem;
+    }
+
+    .coach-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    .coach-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .coach-card {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid rgba(63, 64, 33, 0.2);
+      border-radius: var(--radius-lg);
+      background: rgba(214, 208, 184, 0.58);
+    }
+
+    .coach-card.featured {
+      background: var(--olive-soft);
+      color: var(--cream);
+      border-color: transparent;
+    }
+
+    .coach-photo {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--beige);
+      box-shadow: 0 18px 36px rgba(43, 39, 40, 0.14);
+    }
+
+    .coach-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .coach-card h3 {
+      margin-bottom: 4px;
+      color: var(--olive);
+      font-size: 2.25rem;
+      line-height: 1.08;
+    }
+
+    .coach-card.featured h3 {
+      color: var(--cream);
+    }
+
+    .coach-role {
+      margin-bottom: 14px;
+      color: var(--olive-soft);
+      font-size: 1.18rem;
+      line-height: 1.35;
+      font-weight: 400;
+    }
+
+    .coach-card.featured .coach-role {
+      color: rgba(255, 247, 231, 0.82);
+    }
+
+    .coach-card p {
+      color: rgba(43, 39, 40, 0.78);
+      font-size: 0.98rem;
+    }
+
+    .coach-card.featured p {
+      color: rgba(255, 247, 231, 0.78);
+    }
+
+    .coach-fit {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 247, 231, 0.42);
+      border: 1px solid rgba(63, 64, 33, 0.16);
+    }
+
+    .coach-fit strong {
+      color: var(--olive);
+    }
+
+    .coach-card.featured .coach-fit {
+      background: rgba(255, 247, 231, 0.12);
+      border-color: rgba(255, 247, 231, 0.18);
+    }
+
+    .coach-card.featured .coach-fit strong {
+      color: var(--amber);
+    }
+
+    .coach-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .expect-card {
+      padding: 22px;
+      border-radius: var(--radius-md);
+      background: var(--cream);
+      border: 1px solid var(--line);
+    }
+
+    .expect-card h3 {
+      margin-bottom: 10px;
+      color: var(--olive);
+      font-size: 1.12rem;
+    }
+
+    .expect-card p {
+      margin-bottom: 0;
+      color: var(--ink-muted);
+      font-size: 0.96rem;
+    }
+
+    #faq {
+      padding-top: 38px;
+    }
+
+    #consultation {
+      padding-top: 40px;
+    }
+
+    .booking-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 34px;
+      align-items: center;
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      background: var(--olive);
+      color: var(--cream);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-panel h2 {
+      margin-bottom: 8px;
+      font-size: 2.35rem;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    .booking-panel p {
+      margin-bottom: 0;
+      color: rgba(255, 247, 231, 0.78);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 900px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.35);
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 16px 20px;
+      color: var(--olive);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 20px 18px;
+      color: var(--ink-muted);
+    }
+
+    .site-footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+      background: var(--cream);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+
+    .footer-logo {
+      width: min(260px, 46vw);
+    }
+
+    .footer-note {
+      margin: 16px 0 0;
+      max-width: 720px;
+      color: rgba(43, 39, 40, 0.6);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 12px 0;
+      }
+
+      .nav-links,
+      .nav-actions {
+        justify-self: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        min-height: 560px;
+      }
+
+      .hero-proof,
+      .method-grid,
+      .expect-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .split,
+      .coach-intro,
+      .coach-card,
+      .booking-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-panel {
+        align-items: start;
+      }
+
+      h1 {
+        font-size: 4.05rem;
+      }
+
+      .section-heading {
+        font-size: 2.55rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, var(--container));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-logo img {
+        width: min(260px, 76vw);
+      }
+
+      .nav-actions {
+        width: 100%;
+      }
+
+      .nav-actions .button {
+        width: 100%;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero-content {
+        padding: 64px 0 42px;
+      }
+
+      h1 {
+        font-size: 2.72rem;
+      }
+
+      .hero-actions .button,
+      .coach-actions .button {
+        width: 100%;
+      }
+
+      .hero-proof,
+      .method-grid,
+      .expect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .section-heading {
+        font-size: 2.05rem;
+      }
+
+      .booking-panel h2 {
+        font-size: 1.75rem;
+      }
+
+      .image-panel,
+      .image-panel img {
+        min-height: 300px;
+      }
+
+      .coach-card,
+      .booking-panel {
+        padding: 18px;
+        border-radius: 20px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <p>Opening the LaWayra landing page. <a href="landing_page/">Continue here</a>.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav" aria-label="Main navigation">
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#why">Why integration</a>
+        <a href="#coaches">Coaches</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="nav-logo" href="https://ayahuascaincolombia.com" aria-label="LaWayra home">
+        <img src="assets/images/lawayra-logo-new.png" alt="LaWayra Ayahuasca Retreat">
+      </a>
+      <div class="nav-actions">
+        <a class="button button-primary" href="#consultation">Book a free consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <h1 id="hero-title">Post-Retreat Integration Coaching</h1>
+        <p class="hero-lede">The retreat may end, but the work of living what you discovered keeps unfolding. LaWayra integration coaching gives you grounded one-to-one support after your ayahuasca retreat in Colombia.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#coaches">Meet the coaches</a>
+          <a class="button button-light" href="#consultation">Book your free 30 min consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-proof" aria-label="Integration coaching benefits">
+      <div class="proof-item">
+        <strong>Stay connected after retreat</strong>
+        <span>Support for the emotional, relational, and practical shifts that continue at home.</span>
+      </div>
+      <div class="proof-item">
+        <strong>Choose the right coach</strong>
+        <span>Three integration coaches with different lenses, training, and specialties.</span>
+      </div>
+      <div class="proof-item">
+        <strong>Turn insight into practice</strong>
+        <span>Simple, grounded conversations that help you apply what became clear.</span>
+      </div>
+    </div>
+
+    <section class="section" id="why">
+      <div class="container split">
+        <div>
+          <p class="section-kicker">Why integration matters</p>
+          <h2 class="section-heading">The experience can be profound. The integration is what helps it become your life.</h2>
+          <p class="section-intro">Many people leave retreat feeling deeply connected to themselves, to others, and to something bigger. Then they return home to routines, relationships, work, and questions that ask for patience and support.</p>
+          <ul class="pain-list">
+            <li>You felt clarity during ceremony, but now you are unsure how to act on it.</li>
+            <li>Emotions, memories, or patterns are surfacing and you want a grounded place to process them.</li>
+            <li>You want support that respects the medicine experience without turning it into pressure or over-analysis.</li>
+            <li>You are looking for practical next steps, not a generic promise of transformation.</li>
+          </ul>
+        </div>
+        <figure class="image-panel">
+          <img src="assets/images/paradise.webp" alt="A peaceful natural view connected to the LaWayra retreat environment">
+          <figcaption class="image-panel-caption">Integration is the bridge between what opened during retreat and how you care for your life after.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="approach">
+      <div class="container">
+        <p class="section-kicker">The coaching approach</p>
+        <h2 class="section-heading">Gentle structure for the weeks after ceremony</h2>
+        <p class="section-intro">Integration coaching is personal support for making sense of your experience, identifying what needs attention, and building grounded practices that fit your real life.</p>
+        <div class="method-grid">
+          <article class="method-card">
+            <div class="method-number">1</div>
+            <h3>Ground the experience</h3>
+            <p>Name what happened, what feels important, and what needs more time without forcing immediate conclusions.</p>
+          </article>
+          <article class="method-card">
+            <div class="method-number">2</div>
+            <h3>Understand the pattern</h3>
+            <p>Explore emotional, relational, somatic, or spiritual themes that may be asking for care.</p>
+          </article>
+          <article class="method-card">
+            <div class="method-number">3</div>
+            <h3>Choose the next step</h3>
+            <p>Turn insight into one or two practical actions, boundaries, conversations, or practices.</p>
+          </article>
+          <article class="method-card">
+            <div class="method-number">4</div>
+            <h3>Stay supported</h3>
+            <p>Return to the process with a coach who can help you stay connected, steady, and honest.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="coaches">
+      <div class="container">
+        <div class="coach-intro">
+          <div>
+            <p class="section-kicker">Integration coaching</p>
+            <h2 class="section-heading">Choose the support that fits where you are now.</h2>
+          </div>
+          <p class="section-intro">Each coach brings a different lens to integration. Read the profiles below, then begin with a free consultation so the LaWayra team can guide you toward the support that feels most aligned.</p>
+        </div>
+
+        <div class="coach-grid">
+          <article class="coach-card featured">
+            <div class="coach-photo">
+              <img src="assets/images/monica-kronstain.png" alt="Monica, integration coach and head of facilitation at LaWayra">
+            </div>
+            <div>
+              <h3>Monica</h3>
+              <p class="coach-role">Integration Coach &amp; Head Of Facilitation, Masters In Psychology &amp; Neuroscience</p>
+              <p>As Head of Facilitation at LaWayra, Monica brings a rare combination of clinical depth and direct ceremonial experience. Her background in psychology, neuroscience, and psychiatric care allows her to support clients in translating profound inner experiences into grounded, real-life change.</p>
+              <p>Her work integrates intuitive psychodynamic and schema-informed therapy, inner child work, somatic practice, and mindfulness. She focuses on identity shifts, relational patterns, emotional regulation, and helping clients move from insight into embodied, lasting transformation.</p>
+              <p class="coach-fit"><strong>Choose Monica if</strong> you want support from someone deeply connected to LaWayra's facilitation process, with a psychology-informed lens for identity shifts, emotional regulation, and translating ceremony insights into daily life.</p>
+              <div class="coach-actions">
+                <a class="button button-primary" href="#consultation">Book your free 30 min consultation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="coach-card featured">
+            <div class="coach-photo">
+              <img src="assets/images/ashley-townsend.png" alt="Ashley Townsend, integration coach, licensed clinical social worker and musical therapist">
+            </div>
+            <div>
+              <h3>Ashley</h3>
+              <p class="coach-role">Integration Coach, Licensed Clinical Social Worker &amp; Musical Therapist</p>
+              <p>Ashley Townsend has over 15 years of experience working with people of all ages with complex trauma. Ashley offers a non-diagnostic, trauma-trained approach supported by modalities such as Parts Work, psychodynamic music therapy, and somatic release.</p>
+              <p>She specializes in supporting survivors of abuse, sexual trauma, foster care, and people on the path to recovery from addiction.</p>
+              <p class="coach-fit"><strong>Choose Ashley if</strong> you are seeking trauma-informed support, somatic grounding, Parts Work, or a careful non-diagnostic space to process complex emotional material after retreat.</p>
+              <div class="coach-actions">
+                <a class="button button-primary" href="#consultation">Book your free 30 min consultation</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="coach-card featured">
+            <div class="coach-photo">
+              <img src="assets/images/aliyah-pettitt.png" alt="Aliyah, integration coach and Jay Shetty Certified Conscious Business Coach">
+            </div>
+            <div>
+              <h3>Aliyah</h3>
+              <p class="coach-role">Integration Coach, Jay Shetty Certified Conscious Business Coach, Political Science Graduate &amp; Mother</p>
+              <p>Aliyah brings a compassionate and heart-led approach to personal transformation, blending conscious coaching, integration support, and over 20 years of self-development studies. As a Jay Shetty Certified Conscious Business Coach with a background in political science, she supports individuals in reconnecting with purpose, emotional alignment, and conscious living.</p>
+              <p>Grounded in faith, service, and personal growth, Aliyah is passionate about helping people integrate transformational experiences into lasting, embodied change through her work at LaWayra and healing.</p>
+              <p class="coach-fit"><strong>Choose Aliyah if</strong> you want heart-led coaching around purpose, emotional alignment, conscious living, and turning personal insight into a more intentional way of moving through the world.</p>
+              <div class="coach-actions">
+                <a class="button button-primary" href="#consultation">Book your free 30 min consultation</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">What to expect</p>
+        <h2 class="section-heading">Clear support, without pressure or overpromising.</h2>
+        <p class="section-intro">Integration coaching is not a replacement for medical care, emergency support, or crisis treatment. It is a grounded conversation space for reflection, meaning-making, emotional support, and practical next steps.</p>
+        <div class="expect-grid">
+          <article class="expect-card">
+            <h3>A compassionate space</h3>
+            <p>Speak honestly about what surfaced during and after retreat with someone trained to listen carefully.</p>
+          </article>
+          <article class="expect-card">
+            <h3>Practical integration</h3>
+            <p>Identify simple routines, boundaries, conversations, or practices that help the experience become lived change.</p>
+          </article>
+          <article class="expect-card">
+            <h3>Coach-specific guidance</h3>
+            <p>Choose a coach based on the kind of support you need: clinical depth, trauma-informed care, or purpose-led coaching.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <p class="section-kicker">Common questions</p>
+        <h2 class="section-heading">Before you book</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Who is integration coaching for?</summary>
+            <p>It is for LaWayra guests or people connected to the retreat experience who want extra support after ceremony. It may be especially helpful if you are processing emotions, decisions, relationship patterns, purpose, or how to bring the experience into daily life.</p>
+          </details>
+          <details>
+            <summary>Is this therapy?</summary>
+            <p>Integration coaching can be deeply supportive, and some coaches bring clinical or trauma-informed training, but it is not emergency care or a substitute for medical, psychiatric, or crisis support. If you are in immediate crisis, contact local emergency services or a qualified crisis-support provider.</p>
+          </details>
+          <details>
+            <summary>How do I choose the right coach?</summary>
+            <p>Start with the kind of support you need most right now. Monica is a strong fit for guests who want psychology-informed integration connected to LaWayra's facilitation process, identity shifts, relational patterns, and emotional regulation. Ashley is a strong fit for guests who want trauma-informed, somatic, Parts Work, music therapy, or addiction-recovery-aware support. Aliyah is a strong fit for guests who want heart-led conscious coaching around purpose, emotional alignment, faith, service, and intentional living.</p>
+          </details>
+          <details>
+            <summary>What happens after I book a consultation?</summary>
+            <p>The booking path begins with a free 30 minute consultation. From there, the LaWayra team can help you understand which coach and next step best fit your integration needs.</p>
+          </details>
+          <details>
+            <summary>What results are realistic?</summary>
+            <p>Integration coaching can help you reflect, clarify next steps, and stay connected to what matters. It should not guarantee a specific emotional, medical, financial, or therapeutic outcome.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="consultation">
+      <div class="container booking-panel">
+        <div>
+          <h2>Ready to keep integrating with support?</h2>
+          <p>Start with a free 30 minute consultation with one of our coaches. This first conversation helps you understand what kind of support fits your experience and what the next step could look like.</p>
+        </div>
+        <div>
+          <a class="button button-primary" href="https://ayahuascaincolombia.com">Book your free 30 min consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://ayahuascaincolombia.com">Retreats</a>
+          <a href="https://ayahuascaincolombia.com">Contact</a>
+          <a href="https://ayahuascaincolombia.com">Privacy</a>
+          <a href="https://ayahuascaincolombia.com">Refund policy</a>
+        </nav>
+        <p class="footer-note">LaWayra Ayahuasca Retreat, Fredonia, Colombia. Integration coaching offers a grounded way to stay connected to the insights, care, and community that continue after retreat.</p>
+      </div>
+      <img class="footer-logo" src="assets/images/lawayra-logo-new.png" alt="LaWayra Ayahuasca Retreat">
+    </div>
+  </footer>
 </body>
 </html>
