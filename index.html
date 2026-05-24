@@ -604,10 +604,58 @@
       color: rgba(255, 247, 231, 0.78);
     }
 
+    .faq-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(320px, 0.78fr);
+      gap: 28px;
+      align-items: start;
+    }
+
     .faq-list {
       display: grid;
       gap: 12px;
       max-width: 900px;
+    }
+
+    .faq-media {
+      position: sticky;
+      top: 120px;
+      overflow: hidden;
+      border: 1px solid rgba(63, 64, 33, 0.12);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255, 247, 231, 0.78), rgba(255, 247, 231, 0.94));
+      box-shadow: var(--shadow);
+    }
+
+    .faq-video-wrap {
+      aspect-ratio: 4 / 5;
+      background: #1d1d18;
+    }
+
+    .faq-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .faq-media-copy {
+      padding: 18px 20px 20px;
+    }
+
+    .faq-media-copy strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--olive);
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .faq-media-copy p {
+      margin-bottom: 0;
+      color: var(--ink-muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
     }
 
     details {
@@ -692,8 +740,13 @@
       .split,
       .coach-intro,
       .coach-card,
-      .booking-panel {
+      .booking-panel,
+      .faq-layout {
         grid-template-columns: 1fr;
+      }
+
+      .faq-media {
+        position: static;
       }
 
       .booking-panel {
@@ -964,29 +1017,45 @@
 
     <section class="section section-alt" id="faq">
       <div class="container">
-        <p class="section-kicker">Common questions</p>
-        <h2 class="section-heading">Before you book</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Who is integration coaching for?</summary>
-            <p>It is for LaWayra guests or people connected to the retreat experience who want extra support after ceremony. It may be especially helpful if you are processing emotions, decisions, relationship patterns, purpose, or how to bring the experience into daily life.</p>
-          </details>
-          <details>
-            <summary>Is this therapy?</summary>
-            <p>Integration coaching can be deeply supportive, and some coaches bring clinical or trauma-informed training, but it is not emergency care or a substitute for medical, psychiatric, or crisis support. If you are in immediate crisis, contact local emergency services or a qualified crisis-support provider.</p>
-          </details>
-          <details>
-            <summary>How do I choose the right coach?</summary>
-            <p>Start with the kind of support you need most right now. Monica is a strong fit for guests who want psychology-informed integration connected to LaWayra's facilitation process, identity shifts, relational patterns, and emotional regulation. Ashley is a strong fit for guests who want trauma-informed, somatic, Parts Work, music therapy, or addiction-recovery-aware support. Aliyah is a strong fit for guests who want heart-led conscious coaching around purpose, emotional alignment, faith, service, and intentional living.</p>
-          </details>
-          <details>
-            <summary>What happens after I book a consultation?</summary>
-            <p>The booking path begins with a free 30 minute consultation. From there, the LaWayra team can help you understand which coach and next step best fit your integration needs.</p>
-          </details>
-          <details>
-            <summary>What results are realistic?</summary>
-            <p>Integration coaching can help you reflect, clarify next steps, and stay connected to what matters. It should not guarantee a specific emotional, medical, financial, or therapeutic outcome.</p>
-          </details>
+        <div class="faq-layout">
+          <div>
+            <p class="section-kicker">Common questions</p>
+            <h2 class="section-heading">Before you book</h2>
+            <div class="faq-list">
+              <details>
+                <summary>Who is integration coaching for?</summary>
+                <p>It is for LaWayra guests or people connected to the retreat experience who want extra support after ceremony. It may be especially helpful if you are processing emotions, decisions, relationship patterns, purpose, or how to bring the experience into daily life.</p>
+              </details>
+              <details>
+                <summary>Is this therapy?</summary>
+                <p>Integration coaching can be deeply supportive, and some coaches bring clinical or trauma-informed training, but it is not emergency care or a substitute for medical, psychiatric, or crisis support. If you are in immediate crisis, contact local emergency services or a qualified crisis-support provider.</p>
+              </details>
+              <details>
+                <summary>How do I choose the right coach?</summary>
+                <p>Start with the kind of support you need most right now. Monica is a strong fit for guests who want psychology-informed integration connected to LaWayra's facilitation process, identity shifts, relational patterns, and emotional regulation. Ashley is a strong fit for guests who want trauma-informed, somatic, Parts Work, music therapy, or addiction-recovery-aware support. Aliyah is a strong fit for guests who want heart-led conscious coaching around purpose, emotional alignment, faith, service, and intentional living.</p>
+              </details>
+              <details>
+                <summary>What happens after I book a consultation?</summary>
+                <p>The booking path begins with a free 30 minute consultation. From there, the LaWayra team can help you understand which coach and next step best fit your integration needs.</p>
+              </details>
+              <details>
+                <summary>What results are realistic?</summary>
+                <p>Integration coaching can help you reflect, clarify next steps, and stay connected to what matters. It should not guarantee a specific emotional, medical, financial, or therapeutic outcome.</p>
+              </details>
+            </div>
+          </div>
+          <aside class="faq-media" aria-label="LaWayra retreat video">
+            <div class="faq-video-wrap">
+              <video class="faq-video" controls playsinline muted preload="metadata" poster="assets/images/paradiese_2.jpg">
+                <source src="assets/images/LaWayra-promo-video-2025-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="faq-media-copy">
+              <strong>See the landscape that holds the work.</strong>
+              <p>A short glimpse of the LaWayra environment, placed here to support the questions people often hold before they take the next step.</p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
