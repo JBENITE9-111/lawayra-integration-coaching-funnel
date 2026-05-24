@@ -606,9 +606,9 @@
 
     .faq-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.82fr);
-      gap: 34px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.9fr);
+      gap: 38px;
+      align-items: stretch;
     }
 
     .faq-list {
@@ -618,9 +618,13 @@
     }
 
     .faq-media {
+      align-self: stretch;
       justify-self: end;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      max-width: 440px;
+      max-width: 500px;
+      min-height: 100%;
       overflow: hidden;
       border: 1px solid rgba(63, 64, 33, 0.12);
       border-radius: 28px;
@@ -629,7 +633,8 @@
     }
 
     .faq-video-wrap {
-      aspect-ratio: 16 / 10;
+      flex: 1 1 auto;
+      min-height: 0;
       background: #171711;
     }
 
@@ -1052,14 +1057,14 @@
           </div>
           <aside class="faq-media" aria-label="LaWayra retreat video">
             <div class="faq-video-wrap">
-              <video class="faq-video" src="assets/images/LaWayra-promo-video-2025-1.mp4" controls playsinline preload="metadata" poster="assets/images/paradiese_2.jpg" aria-label="LaWayra retreat preview video">
-                <source src="assets/images/LaWayra-promo-video-2025-1.mp4" type="video/mp4">
+              <video class="faq-video" src="assets/images/LaWayra-promo-video-2025-1-web.mp4" controls playsinline preload="metadata" poster="assets/images/paradiese_2.jpg" aria-label="LaWayra retreat preview video">
+                <source src="assets/images/LaWayra-promo-video-2025-1-web.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
             <div class="faq-media-copy">
-              <strong>See the landscape that holds the work.</strong>
-              <p>A short glimpse of the LaWayra environment, placed here to support the questions people often hold before they take the next step.</p>
+              <strong>The retreat may have already changed something essential in you.</strong>
+              <p>Integration is what helps that change become whole, grounded, and lasting in the life you return to.</p>
             </div>
           </aside>
         </div>
